@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <%- include("./_share/stylesheets.ejs") %>
+</head>
+
+<body>
+  <div class="outerframe">
+
+    <%- include("./_share/navbar.ejs") %>
+
+    <div class="container">
+      <h1 class="display-1 text-center mt-5 mb-5"><i class="fa fa-fw fa-map-marker"></i> search</h1>
+      <form action="/search" method="GET" class="mt-5 mb-5">
+        <div class="form-group row justify-content-center">
+          <div class="input-group mt-3 mb-3 col-sm-8">
+            <input type="text" class="form-control" id="keyword" name="keyword" />
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="submit"><i class="fa fa-fw fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <%- include("./_share/javascripts.ejs") %>
+</body>
+
+</html>

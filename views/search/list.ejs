@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Search</title>
+  <%- include("../_share/stylesheets.ejs") %>
+</head>
+
+<body>
+  <div class="outerframe">
+
+    <%- include("../_share/navbar.ejs") %>
+
+    <div class="container">
+      <div class="border-bottom">
+        <form action="/search" method="GET" class="mt-5 mb-5">
+          <div class="form-group row justify-content-center">
+            <div class="input-group mt-3 mb-3 col-sm-8">
+<!-- ------- PROGRAMING -START- -------------------- -->
+              <input type="text" class="form-control" id="keyword" name="keyword" value="<%= keyword %>" />
+<!-- ------- PROGRAMING - END - -------------------- -->
+              <div class="input-group-append">
+                <button class="btn btn-secondary" type="submit"><i class="fa fa-fw fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="card-columns mt-5">
+        <% for (var item of results) { %>
+        <%- include("./item.ejs", item) %>
+        <% } %>
+      </div>
+    </div>
+
+    <%- include("../_share/footer.ejs") %>
+
+  </div>
+  <%- include("../_share/javascripts.ejs") %>
+</body>
+
+</html>

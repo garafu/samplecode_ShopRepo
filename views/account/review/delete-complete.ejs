@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <%- include("../../_share/stylesheets.ejs") %>
+  </head>
+  <body>
+    <div class="outerframe">
+      
+      <%- include("../../_share/navbar.ejs") %>
+  
+      <div class="container">
+        <div class="border-bottom mt-5 mb-5">
+          <h1 class="">口コミの削除</h1>
+        </div>
+
+        <div class="alert alert-success mt-5 mb-5">投稿の削除が完了しました。</div>
+
+        <div class="text-center mt-5 mb-5">
+          <a class="btn btn-outline-primary" href="/shop/<%= shopId %>/">ショップページへ戻る</a>
+        </div>
+
+      </div>
+
+      <%- include("../../_share/footer.ejs") %>
+
+    </div>
+    <%- include("../../_share/javascripts.ejs") %>
+  </body>
+</html>
